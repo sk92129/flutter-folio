@@ -7,7 +7,7 @@ import 'package:flutter_folio/views/user_profile_card/user_profile_card.dart';
 import 'package:flutter_folio/views/user_profile_card/user_profile_form.dart';
 
 class RoundedProfileBtn extends StatelessWidget {
-  const RoundedProfileBtn({Key? key, this.useBottomSheet = false, this.invertRow = false}) : super(key: key);
+  const RoundedProfileBtn({super.key, this.useBottomSheet = false, this.invertRow = false});
   final bool useBottomSheet;
   final bool invertRow;
   @override

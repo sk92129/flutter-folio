@@ -6,11 +6,11 @@ class AnimatedIndexStack extends StatefulWidget {
   final Duration duration;
 
   const AnimatedIndexStack({
-    Key? key,
+    super.key,
     required this.index,
     required this.children,
     this.duration = const Duration(milliseconds: 250),
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedIndexStackState createState() => _AnimatedIndexStackState();

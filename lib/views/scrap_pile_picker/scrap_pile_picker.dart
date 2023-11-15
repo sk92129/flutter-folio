@@ -25,13 +25,13 @@ part 'scrap_pile_picker_view.dart';
 /// [ScrapPilePickerState] acts as a controller for [ScrapPilePickerView]
 class ScrapPilePicker extends StatefulWidget {
   const ScrapPilePicker({
-    Key? key,
+    super.key,
     required this.bookId,
     this.contextMenuButtons,
     this.onSelectionChanged,
     this.onDeletePressed,
     this.mobileMode = false,
-  }) : super(key: key);
+  });
 
   final String bookId;
   final List<ContextMenuButtonConfig> Function(ScrapItem item)? contextMenuButtons;

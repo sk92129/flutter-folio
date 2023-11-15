@@ -4,12 +4,12 @@ import 'package:flutter_folio/models/app_model.dart';
 
 class StyledScrollbar extends StatelessWidget {
   const StyledScrollbar({
-    Key? key,
+    super.key,
     required this.child,
     required this.controller,
     this.padding,
     this.enabled = true,
-  }) : super(key: key);
+  });
   final bool enabled;
   final Widget child;
   final ScrollController controller;
@@ -24,8 +24,8 @@ class StyledScrollbar extends StatelessWidget {
             controller: controller,
             radius: Corners.smRadius,
             thickness: touchMode ? 6 : 10,
-            showTrackOnHover: false,
-            isAlwaysShown: touchMode == false,
+            trackVisibility: false,
+            thumbVisibility: touchMode == false,
             child: paddedChild,
           )
         : paddedChild;

@@ -10,7 +10,7 @@ import 'scrap_data.dart';
 
 class Scrapboard<T> extends StatefulWidget {
   const Scrapboard(
-      {Key? key,
+      {super.key,
       required this.boxes,
       required this.itemBuilder,
       this.onTranslated,
@@ -22,8 +22,7 @@ class Scrapboard<T> extends StatefulWidget {
       this.startOffset = Offset.zero,
       this.readOnly = false,
       this.onSelectionChanged,
-      this.itemControlsBuilder})
-      : super(key: key);
+      this.itemControlsBuilder});
 
   final List<ScrapData<T>> boxes;
   final Widget Function(T data) itemBuilder;
@@ -79,11 +78,11 @@ class ScrapboardState<T> extends State<Scrapboard<T>> with RawKeyboardListenerMi
 
   @override
   Widget build(BuildContext context) {
-    final _selected = _getSelectedBoxInstances();
+    final selected = _getSelectedBoxInstances();
     // If a singe item is selected, use the itemControlsBuilder to show any item controls provided by the parent widget.
     Widget? itemControls;
-    if (_selected.isNotEmpty) {
-      itemControls = widget.itemControlsBuilder?.call(_selected.first.data);
+    if (selected.isNotEmpty) {
+      itemControls = widget.itemControlsBuilder?.call(selected.first.data);
     }
     return Scaffold(
       body: Stack(
@@ -142,7 +141,7 @@ class ScrapboardState<T> extends State<Scrapboard<T>> with RawKeyboardListenerMi
                         // Use provided builder to render actual item
                         child: widget.itemBuilder.call(boxData.data),
                       );
-                    }).toList(),
+                    }),
 
                     if (itemControls != null) ...[
                       itemControls,

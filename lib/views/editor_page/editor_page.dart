@@ -13,7 +13,7 @@ import 'panels/content_picker_tab_menu.dart';
 import 'panels/simple_pages_menu.dart';
 
 class EditorPage extends StatefulWidget {
-  const EditorPage({Key? key, required this.bookId, this.readOnly = false}) : super(key: key);
+  const EditorPage({super.key, required this.bookId, this.readOnly = false});
   final String bookId;
   final bool readOnly;
 
@@ -102,7 +102,7 @@ class _EditorPageState extends State<EditorPage> {
 
 /// Floating FAB style btn
 class _MobileScrapPileBtn extends StatelessWidget {
-  const _MobileScrapPileBtn({Key? key, required this.onPressed}) : super(key: key);
+  const _MobileScrapPileBtn({required this.onPressed});
   final VoidCallback onPressed;
 
   @override

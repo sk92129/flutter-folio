@@ -4,13 +4,12 @@ import 'package:flutter_folio/models/app_model.dart';
 
 class ScrapPilePickerTitleBar extends StatelessWidget {
   const ScrapPilePickerTitleBar(
-      {Key? key,
+      {super.key,
       required this.onSelectAllPressed,
       required this.onClosePressed,
       required this.title,
       required this.isAllSelected,
-      this.mobileMode = false})
-      : super(key: key);
+      this.mobileMode = false});
   final VoidCallback onSelectAllPressed;
   final VoidCallback onClosePressed;
   final String title;
@@ -32,13 +31,13 @@ class ScrapPilePickerTitleBar extends StatelessWidget {
                 TextBtn("Select ${isAllSelected ? "None" : "All"}", onPressed: onSelectAllPressed),
                 const Spacer(),
                 SimpleBtn(
+                    onPressed: onClosePressed,
                     child: AnimatedPadding(
                       curve: Curves.easeOut,
                       duration: Times.fast,
                       padding: EdgeInsets.all(touchMode ? 4 : 0),
                       child: const MaterialIcon(Icons.close),
-                    ),
-                    onPressed: onClosePressed)
+                    ))
               ],
             ),
           Positioned.fill(

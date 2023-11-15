@@ -4,7 +4,7 @@ import 'package:flutter_folio/core_packages.dart';
 
 class StyledToggleSwitch extends StatefulWidget {
   StyledToggleSwitch(
-      {Key? key,
+      {super.key,
       this.value = false,
       this.onToggled,
       required this.tooltip1,
@@ -12,8 +12,7 @@ class StyledToggleSwitch extends StatefulWidget {
       this.icon1,
       this.icon2,
       this.materialIcon1,
-      this.materialIcon2})
-      : super(key: key) {
+      this.materialIcon2}) {
     assert((icon1 != null || materialIcon1 != null) && (icon2 != null || materialIcon2 != null));
   }
   final bool value;
@@ -52,13 +51,13 @@ class _StyledToggleSwitchState extends State<StyledToggleSwitch> {
             children: [
               _BtnWithTooltip(
                 onPressed: !widget.value ? null : () => widget.onToggled?.call(false),
-                child: _buildIcon(widget.icon1, widget.materialIcon1),
                 toolTip: widget.tooltip1,
+                child: _buildIcon(widget.icon1, widget.materialIcon1),
               ),
               _BtnWithTooltip(
                 onPressed: !widget.value ? () => widget.onToggled?.call(true) : null,
-                child: _buildIcon(widget.icon2, widget.materialIcon2),
                 toolTip: widget.tooltip2,
+                child: _buildIcon(widget.icon2, widget.materialIcon2),
               ),
             ],
           )),
@@ -109,7 +108,7 @@ class _BtnWithTooltip extends StatelessWidget {
   final String toolTip;
   final Widget child;
 
-  const _BtnWithTooltip({Key? key, this.onPressed, required this.toolTip, required this.child}) : super(key: key);
+  const _BtnWithTooltip({this.onPressed, required this.toolTip, required this.child});
   @override
   Widget build(BuildContext context) {
     return Expanded(

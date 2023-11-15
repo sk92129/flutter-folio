@@ -19,7 +19,7 @@ class PickImagesCommand extends BaseAppCommand {
   Future<List<PickedImage>> run({bool allowMultiple = false, bool enableCamera = true}) async {
     List<PickedImage> images = [];
     if (DeviceOS.isDesktopOrWeb) {
-      final typeGroup = XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png']);
+      const typeGroup = XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png']);
       images =
           (await openFiles(acceptedTypeGroups: [typeGroup])).map((file) => PickedImage()..path = file.path).toList();
     } else {

@@ -11,13 +11,13 @@ import 'package:flutter_folio/models/app_model.dart';
 class DraggablePageTitleBtn extends StatefulWidget {
   const DraggablePageTitleBtn(
     this.page, {
-    Key? key,
+    super.key,
     this.onPressed,
     this.onDragCancelled,
     required this.height,
     this.isSelected = false,
     this.isDragFeedback = false,
-  }) : super(key: key);
+  });
   final ScrapPageData page;
   final VoidCallback? onPressed;
   final VoidCallback? onDragCancelled;
@@ -52,7 +52,7 @@ class _DraggablePageTitleBtnState extends State<DraggablePageTitleBtn> {
             onDragStarted: _handleDragStart,
             onDragEnd: _handleDragEnd,
             onDraggableCanceled: (_, __) => widget.onDragCancelled?.call(),
-            childWhenDragging: Opacity(child: child, opacity: .4),
+            childWhenDragging: Opacity(opacity: .4, child: child),
             child: child),
       );
     }
@@ -139,12 +139,11 @@ class _DraggablePageTitleBtnState extends State<DraggablePageTitleBtn> {
 
 class _FadingDragHandle extends StatelessWidget {
   const _FadingDragHandle({
-    Key? key,
     required this.height,
     required this.width,
     required this.opacity,
     required this.isSelected,
-  }) : super(key: key);
+  });
 
   final double height;
   final double width;

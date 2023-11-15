@@ -8,13 +8,13 @@ import 'scrap_popup_editor.dart';
 
 class ScrapPopupPanelColor extends StatelessWidget {
   const ScrapPopupPanelColor({
-    Key? key,
+    super.key,
     required this.label,
     required this.value,
     required this.onColorPicked,
     required this.isOpen,
     required this.swatchColors,
-  }) : super(key: key);
+  });
   final String label;
   final Color value;
   final void Function(Color value) onColorPicked;
@@ -59,13 +59,13 @@ class ScrapPopupPanelColor extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(bottom: 6),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(label, style: TextStyles.caption.copyWith(color: theme.grey)),
                   const MaterialIcon(Icons.chevron_right, size: 16),
                   const Spacer(),
                   _ColorSwatch(value, isSelected: false)
                 ],
-                crossAxisAlignment: CrossAxisAlignment.center,
               ),
             ),
           )
@@ -76,7 +76,7 @@ class ScrapPopupPanelColor extends StatelessWidget {
 }
 
 class _ColorSwatch extends StatelessWidget {
-  const _ColorSwatch(this.color, {Key? key, this.size, required this.isSelected}) : super(key: key);
+  const _ColorSwatch(this.color, {this.size, required this.isSelected});
   final Color color;
   final double? size;
   final bool isSelected;

@@ -29,7 +29,7 @@ const _linuxCloseIconSvg = """
  """;
 
 class LinuxMinimizeIcon extends StatelessWidget {
-  const LinuxMinimizeIcon({required this.color, Key? key}) : super(key: key);
+  const LinuxMinimizeIcon({required this.color, super.key});
 
   final Color color;
 
@@ -40,7 +40,7 @@ class LinuxMinimizeIcon extends StatelessWidget {
 }
 
 class LinuxMaximizeIcon extends StatelessWidget {
-  const LinuxMaximizeIcon({required this.color, Key? key}) : super(key: key);
+  const LinuxMaximizeIcon({required this.color, super.key});
 
   final Color color;
 
@@ -51,7 +51,7 @@ class LinuxMaximizeIcon extends StatelessWidget {
 }
 
 class LinuxUnmaximizeIcon extends StatelessWidget {
-  const LinuxUnmaximizeIcon({required this.color, Key? key}) : super(key: key);
+  const LinuxUnmaximizeIcon({required this.color, super.key});
 
   final Color color;
 
@@ -62,7 +62,7 @@ class LinuxUnmaximizeIcon extends StatelessWidget {
 }
 
 class LinuxCloseIcon extends StatelessWidget {
-  const LinuxCloseIcon({required this.color, Key? key}) : super(key: key);
+  const LinuxCloseIcon({required this.color, super.key});
 
   final Color color;
 

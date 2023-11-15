@@ -8,13 +8,13 @@ class AutoFade extends StatefulWidget {
   final Curve curve;
 
   const AutoFade({
-    Key? key,
+    super.key,
     required this.child,
     this.delay = Duration.zero,
     this.offset = Offset.zero,
     this.duration = const Duration(milliseconds: 350),
     this.curve = Curves.easeOut,
-  }) : super(key: key);
+  });
   @override
   _AutoFadeState createState() => _AutoFadeState();
 }

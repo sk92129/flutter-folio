@@ -8,8 +8,8 @@ class AnimatedOffset extends StatelessWidget {
     this.begin,
     required this.end,
     this.curve = Curves.easeOut,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   final Widget child;
   final Duration duration;
   final Offset? begin;

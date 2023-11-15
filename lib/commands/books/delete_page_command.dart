@@ -14,7 +14,7 @@ class DeletePageCommand extends BaseAppCommand {
             context: mainContext,
             builder: (_) {
               String title = StringUtils.isNotEmpty(page.title) ? "\"${page.title}\"" : "";
-              if (title.length > 30) title = title.substring(0, 30) + "...";
+              if (title.length > 30) title = "${title.substring(0, 30)}...";
               return DeleteDialog(
                 title: "Delete Page $title?",
                 desc1: "Are you sure you want to permanently\ndelete this page?",

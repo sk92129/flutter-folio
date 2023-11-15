@@ -4,7 +4,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:flutter_folio/styled_widgets/context_menus/context_menu_widgets.dart';
 
 class StyledContextMenuOverlay extends StatelessWidget {
-  const StyledContextMenuOverlay({Key? key, required this.child}) : super(key: key);
+  const StyledContextMenuOverlay({super.key, required this.child});
   final Widget child;
 
   @override
@@ -12,7 +12,7 @@ class StyledContextMenuOverlay extends StatelessWidget {
     AppTheme theme = context.watch();
     return ContextMenuOverlay(
       dividerBuilder: (_) => const ContextDivider(),
-      cardBuilder: (_, children) => ContextMenuCard(children: children, padding: EdgeInsets.zero),
+      cardBuilder: (_, children) => ContextMenuCard(padding: EdgeInsets.zero, children: children),
       buttonStyle: ContextMenuButtonStyle(
         textStyle: TextStyles.body2,
         shortcutTextStyle: TextStyles.body2.copyWith(color: theme.grey),

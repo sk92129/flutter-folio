@@ -19,11 +19,11 @@ import 'scrap_popup_panel_fonts.dart';
 
 class ScrapPopupEditor extends StatefulWidget {
   const ScrapPopupEditor({
-    Key? key,
+    super.key,
     required this.scrap,
     required this.onStyleChanged,
     required this.onRotChanged,
-  }) : super(key: key);
+  });
   final PlacedScrapItem scrap;
   final void Function(BoxStyle boxStyle) onStyleChanged;
   final void Function(double rot) onRotChanged;
@@ -100,11 +100,11 @@ class _ScrapPopupEditorState extends State<ScrapPopupEditor> {
                       index: 0,
                       openHeight: 100,
                       childBuilder: (bool isOpen) => _MenuItem(
+                          isOpen: isOpen,
                           child: ScrapPopupPanelAlignment(
                             onAlignmentPressed: _handleAlignChanged,
                             value: scrapStyle.align,
-                          ),
-                          isOpen: isOpen),
+                          )),
                     ),
 
                     /// Font Family
@@ -114,12 +114,12 @@ class _ScrapPopupEditorState extends State<ScrapPopupEditor> {
                       index: 1,
                       openHeight: 140,
                       childBuilder: (bool isOpen) => _MenuItem(
+                        isOpen: isOpen,
                         child: ScrapPopupPanelFonts(
                           isOpen: isOpen,
                           value: scrapStyle.font,
                           onFamilyChanged: _handleFamilyChanged,
                         ),
-                        isOpen: isOpen,
                       ),
                     ),
                   ],
@@ -133,14 +133,14 @@ class _ScrapPopupEditorState extends State<ScrapPopupEditor> {
                       index: 2,
                       openHeight: 166,
                       childBuilder: (bool isOpen) => _MenuItem(
+                          isOpen: isOpen,
                           child: ScrapPopupPanelColor(
                             swatchColors: fgColors,
                             isOpen: isOpen,
                             onColorPicked: _handleFgColorChanged,
                             value: scrapStyle.fgColor,
                             label: "Color",
-                          ),
-                          isOpen: isOpen),
+                          )),
                     ),
 
                     /// BgColor
@@ -150,14 +150,14 @@ class _ScrapPopupEditorState extends State<ScrapPopupEditor> {
                       index: 3,
                       openHeight: 166,
                       childBuilder: (bool isOpen) => _MenuItem(
+                          isOpen: isOpen,
                           child: ScrapPopupPanelColor(
                             swatchColors: bgColors,
                             isOpen: isOpen,
                             onColorPicked: _handleBgColorChanged,
                             value: scrapStyle.bgColor,
                             label: "Background",
-                          ),
-                          isOpen: isOpen),
+                          )),
                     ),
                   ],
                   if (row3Height > 0) ...[
@@ -228,7 +228,7 @@ class _ScrapPopupEditorState extends State<ScrapPopupEditor> {
 }
 
 class _MenuItem extends StatelessWidget {
-  const _MenuItem({Key? key, this.isOpen = false, required this.child}) : super(key: key);
+  const _MenuItem({this.isOpen = false, required this.child});
   final bool isOpen;
   final Widget child;
 
@@ -255,7 +255,7 @@ class _MenuItem extends StatelessWidget {
 }
 
 class PanelHeader extends StatelessWidget {
-  const PanelHeader({Key? key, required this.label, this.showBackArrow = true}) : super(key: key);
+  const PanelHeader({super.key, required this.label, this.showBackArrow = true});
   final String label;
   final bool showBackArrow;
 
@@ -273,7 +273,7 @@ class PanelHeader extends StatelessWidget {
 }
 
 class PopPanelIconBtn extends StatelessWidget {
-  const PopPanelIconBtn({Key? key}) : super(key: key);
+  const PopPanelIconBtn({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -8,8 +8,7 @@ import 'package:flutter_folio/models/books_model.dart';
 import 'package:flutter_folio/views/editor_page/draggable_page_menu/draggable_page_title_btn.dart';
 
 class DraggablePagesMenu extends StatefulWidget {
-  const DraggablePagesMenu({Key? key, required this.pages, required this.pageId, required this.onPressed})
-      : super(key: key);
+  const DraggablePagesMenu({super.key, required this.pages, required this.pageId, required this.onPressed});
   final List<ScrapPageData> pages;
   final String pageId;
   final void Function(ScrapPageData page) onPressed;
@@ -126,7 +125,7 @@ class DraggablePagesMenuState extends State<DraggablePagesMenu> {
 }
 
 class _SelectedPageOutline extends StatelessWidget {
-  const _SelectedPageOutline({Key? key, required this.top, required this.height}) : super(key: key);
+  const _SelectedPageOutline({required this.top, required this.height});
   final double top;
   final double height;
 

@@ -7,7 +7,7 @@ import 'auth_form.dart';
 import 'device_screens.dart';
 
 class AuthPage extends StatelessWidget {
-  const AuthPage({Key? key}) : super(key: key);
+  const AuthPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class SeparatedRow extends StatelessWidget {
   const SeparatedRow({
-    Key? key,
+    super.key,
     required this.children,
     required this.separatorBuilder,
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -14,7 +14,7 @@ class SeparatedRow extends StatelessWidget {
     this.textBaseline = TextBaseline.alphabetic,
     this.textDirection = TextDirection.ltr,
     this.padding = EdgeInsets.zero,
-  }) : super(key: key);
+  });
 
   final List<Widget> children;
   final Widget Function() separatorBuilder;
@@ -33,13 +33,13 @@ class SeparatedRow extends StatelessWidget {
       if (i > 0) c.insert(i, separatorBuilder());
     }
     Widget row = Row(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
     return Padding(padding: padding, child: row);
   }
@@ -57,7 +57,7 @@ class SeparatedColumn extends StatelessWidget {
   final EdgeInsets padding;
 
   const SeparatedColumn({
-    Key? key,
+    super.key,
     required this.children,
     required this.separatorBuilder,
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -67,7 +67,7 @@ class SeparatedColumn extends StatelessWidget {
     this.textBaseline = TextBaseline.alphabetic,
     this.textDirection = TextDirection.ltr,
     this.padding = EdgeInsets.zero,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -76,13 +76,13 @@ class SeparatedColumn extends StatelessWidget {
       if (i > 0) c.insert(i, separatorBuilder());
     }
     Widget col = Column(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
     return Padding(padding: padding, child: col);
   }

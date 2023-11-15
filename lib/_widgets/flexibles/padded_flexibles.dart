@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PaddedRow extends StatelessWidget {
   const PaddedRow({
-    Key? key,
+    super.key,
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -11,7 +11,7 @@ class PaddedRow extends StatelessWidget {
     this.textBaseline = TextBaseline.alphabetic,
     this.textDirection = TextDirection.ltr,
     this.padding = EdgeInsets.zero,
-  }) : super(key: key);
+  });
 
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
@@ -26,13 +26,13 @@ class PaddedRow extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> c = children.toList();
     Widget row = Row(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
     return Padding(padding: padding, child: row);
   }
@@ -40,7 +40,7 @@ class PaddedRow extends StatelessWidget {
 
 class PaddedColumn extends StatelessWidget {
   const PaddedColumn({
-    Key? key,
+    super.key,
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -49,7 +49,7 @@ class PaddedColumn extends StatelessWidget {
     this.textBaseline = TextBaseline.alphabetic,
     this.textDirection = TextDirection.ltr,
     this.padding = EdgeInsets.zero,
-  }) : super(key: key);
+  });
   final List<Widget> children;
   final MainAxisAlignment mainAxisAlignment;
   final CrossAxisAlignment crossAxisAlignment;
@@ -62,13 +62,13 @@ class PaddedColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> c = children.toList();
     Widget col = Column(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
     return Padding(padding: padding, child: col);
   }

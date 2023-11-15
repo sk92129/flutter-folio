@@ -15,11 +15,10 @@ import 'package:flutter_folio/views/editor_page/scrapboard/scrapboard.dart';
 class NetworkedScrapboard extends StatefulWidget {
   const NetworkedScrapboard(
       //this.bookId, String this.pageId,
-      {Key? key,
+      {super.key,
       this.startOffset = Offset.zero,
       this.readOnly = false,
-      this.onSelectionChanged})
-      : super(key: key);
+      this.onSelectionChanged});
   final Offset startOffset;
   final bool readOnly;
 
@@ -81,8 +80,8 @@ class _NetworkedScrapboardState extends State<NetworkedScrapboard> {
                 });
           },
           itemBuilder: (item) {
-            int _selectedIndex = _selectedBoxes.indexWhere((b) => b.data.documentId == item.documentId);
-            bool isSelected = _selectedIndex != -1;
+            int selectedIndex = _selectedBoxes.indexWhere((b) => b.data.documentId == item.documentId);
+            bool isSelected = selectedIndex != -1;
             return PlacedScrapRenderer(
               item,
               isSelected: isSelected,

@@ -9,8 +9,8 @@ class AnimatedRotation extends StatelessWidget {
     required this.duration,
     required this.child,
     this.curve = Curves.linear,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   final Widget child;
   final Duration duration;
   final double? begin;

@@ -9,7 +9,7 @@ import 'package:flutter_folio/models/books_model.dart';
 import 'package:flutter_folio/views/editor_page/draggable_page_menu/draggable_page_menu.dart';
 
 class CollapsiblePagesPanel extends StatefulWidget {
-  const CollapsiblePagesPanel(this.pages, {Key? key, required this.height}) : super(key: key);
+  const CollapsiblePagesPanel(this.pages, {super.key, required this.height});
   final List<ScrapPageData> pages;
   final double height;
 
@@ -57,7 +57,7 @@ class _CollapsiblePagesPanelState extends State<CollapsiblePagesPanel> {
 }
 
 class _RoundedBtn extends StatelessWidget {
-  const _RoundedBtn({Key? key, required this.onPressed}) : super(key: key);
+  const _RoundedBtn({required this.onPressed});
   final VoidCallback onPressed;
 
   @override

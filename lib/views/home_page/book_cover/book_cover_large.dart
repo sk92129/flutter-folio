@@ -12,7 +12,7 @@ import 'package:timeago/timeago.dart' as timeago;
 
 /// Represents the Widget in "Large Mode"
 class LargeBookCover extends StatelessWidget {
-  const LargeBookCover(this.book, {Key? key}) : super(key: key);
+  const LargeBookCover(this.book, {super.key});
   final ScrapBookData book;
 
   @override
@@ -37,7 +37,7 @@ class LargeBookCover extends StatelessWidget {
                   maxLength: 22,
                   onFocusOut: _handleTitleEditingEnded,
                   promptText: "Add Title",
-                  key: ValueKey("title" + book.title),
+                  key: ValueKey("title${book.title}"),
                   width: min(constraints.maxWidth, 550),
                   style: TextStyles.h1.copyWith(color: theme.surface1),
                 ),
@@ -61,7 +61,7 @@ class LargeBookCover extends StatelessWidget {
 
                 /// Desc
                 InlineTextEditor(book.desc,
-                    key: ValueKey("desc" + book.desc),
+                    key: ValueKey("desc${book.desc}"),
                     promptText: "Add Description",
                     onFocusOut: _handleDescEditingEnded,
                     width: 300,

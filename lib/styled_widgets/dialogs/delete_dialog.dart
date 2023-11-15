@@ -4,7 +4,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:universal_platform/universal_platform.dart';
 
 class DeleteDialog extends StatelessWidget {
-  const DeleteDialog({Key? key, required this.title, required this.desc1, this.desc2}) : super(key: key);
+  const DeleteDialog({super.key, required this.title, required this.desc1, this.desc2});
   final String title;
   final String desc1;
   final String? desc2;

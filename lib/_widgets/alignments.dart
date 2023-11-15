@@ -5,7 +5,7 @@ Widget _build(Alignment value, Widget child) => Align(alignment: value, child: c
 
 /// TOPS
 class TopLeft extends StatelessWidget {
-  const TopLeft({Key? key, required this.child}) : super(key: key);
+  const TopLeft({super.key, required this.child});
   final Widget child;
 
   @override
@@ -13,7 +13,7 @@ class TopLeft extends StatelessWidget {
 }
 
 class TopRight extends StatelessWidget {
-  const TopRight({Key? key, required this.child}) : super(key: key);
+  const TopRight({super.key, required this.child});
   final Widget child;
 
   @override
@@ -21,7 +21,7 @@ class TopRight extends StatelessWidget {
 }
 
 class TopCenter extends StatelessWidget {
-  const TopCenter({Key? key, required this.child}) : super(key: key);
+  const TopCenter({super.key, required this.child});
   final Widget child;
 
   @override
@@ -30,7 +30,7 @@ class TopCenter extends StatelessWidget {
 
 /// CENTERS
 class CenterLeft extends StatelessWidget {
-  const CenterLeft({Key? key, required this.child}) : super(key: key);
+  const CenterLeft({super.key, required this.child});
   final Widget child;
 
   @override
@@ -38,7 +38,7 @@ class CenterLeft extends StatelessWidget {
 }
 
 class CenterRight extends StatelessWidget {
-  const CenterRight({Key? key, required this.child}) : super(key: key);
+  const CenterRight({super.key, required this.child});
   final Widget child;
 
   @override
@@ -47,7 +47,7 @@ class CenterRight extends StatelessWidget {
 
 /// BOTTOMS
 class BottomLeft extends StatelessWidget {
-  const BottomLeft({Key? key, required this.child}) : super(key: key);
+  const BottomLeft({super.key, required this.child});
   final Widget child;
 
   @override
@@ -55,7 +55,7 @@ class BottomLeft extends StatelessWidget {
 }
 
 class BottomRight extends StatelessWidget {
-  const BottomRight({Key? key, required this.child}) : super(key: key);
+  const BottomRight({super.key, required this.child});
   final Widget child;
 
   @override
@@ -63,7 +63,7 @@ class BottomRight extends StatelessWidget {
 }
 
 class BottomCenter extends StatelessWidget {
-  const BottomCenter({Key? key, required this.child}) : super(key: key);
+  const BottomCenter({super.key, required this.child});
   final Widget child;
 
   @override

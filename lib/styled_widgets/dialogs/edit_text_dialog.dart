@@ -6,7 +6,7 @@ import 'package:flutter_folio/styled_widgets/labeled_text_input.dart';
 import 'package:flutter_folio/styles.dart';
 
 class ScrapTextEditorDialog extends StatelessWidget {
-  const ScrapTextEditorDialog(this.item, {Key? key}) : super(key: key);
+  const ScrapTextEditorDialog(this.item, {super.key});
   final PlacedScrapItem item;
 
   @override

@@ -7,11 +7,13 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:flutter_folio/views/editor_page/scrapboard/movable_scrap_selection_box.dart';
 import 'package:flutter_folio/views/editor_page/scrapboard/scrap_data.dart';
 
+import '../../../_widgets/listenbuild.dart';
+
 // Wraps some content in a draggable box and with editing controls
 // Provides basic support for translation, selection and scale events
 class MovableScrap<T> extends StatefulWidget {
   const MovableScrap({
-    Key? key,
+    super.key,
     required this.data,
     required this.child,
     required this.onMoved,
@@ -25,7 +27,7 @@ class MovableScrap<T> extends StatefulWidget {
     required this.onMouseOverChanged,
     this.isSelected = false,
     this.showControls = false,
-  }) : super(key: key);
+  });
   final ScrapData<T> data;
   final Widget child;
   final bool isSelected;
@@ -56,7 +58,7 @@ class MovableScrapState extends State<MovableScrap> {
   @override
   Widget build(BuildContext context) {
     double btnSize = Insets.xl;
-    return ListenableBuilder(
+    return ListenBuild(
       listenable: widget.data, // rebuild whenever our data changes
       builder: (BuildContext context, Widget? child) {
         // Position Content
@@ -75,13 +77,13 @@ class MovableScrapState extends State<MovableScrap> {
                   onRotateDrag: (value) => widget.onRotateDragged(widget.data, value),
                   onDragEnded: () => widget.onCornerDragComplete(widget.data),
                   isVisible: widget.showControls,
+                  btnSize: btnSize,
+                  showControls: widget.showControls,
                   child: Padding(
                     padding: EdgeInsets.all(3 + btnSize),
                     // Rotate the box content according to .rot setting
                     child: _DraggableHitArea(this, child: widget.child),
                   ),
-                  btnSize: btnSize,
-                  showControls: widget.showControls,
                 ),
               ),
             ],
@@ -113,7 +115,7 @@ class MovableScrapState extends State<MovableScrap> {
 }
 
 class _DraggableHitArea extends StatelessWidget {
-  const _DraggableHitArea(this.state, {Key? key, required this.child}) : super(key: key);
+  const _DraggableHitArea(this.state, {required this.child});
   final MovableScrapState state;
   final Widget child;
 

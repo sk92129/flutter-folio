@@ -3,7 +3,7 @@ part of 'scrap_pile_picker.dart';
 /// Stateless view that is uses [ScrapPilePickerState] as it's controller
 /// It couples directly to ScrapPileGridState to reduce boilerplate, rather than exposing a ton of params and callbacks.
 class ScrapPilePickerView extends StatelessWidget {
-  const ScrapPilePickerView({Key? key, required this.state, required this.bookScraps}) : super(key: key);
+  const ScrapPilePickerView({super.key, required this.state, required this.bookScraps});
   final ScrapPilePickerState state;
   final List<ScrapItem>? bookScraps;
 
@@ -124,7 +124,7 @@ class ScrapPilePickerView extends StatelessWidget {
 }
 
 class GridBtn extends StatefulWidget {
-  const GridBtn({Key? key, required this.onPressed, this.bgColor, required this.child}) : super(key: key);
+  const GridBtn({super.key, required this.onPressed, this.bgColor, required this.child});
 
   final VoidCallback onPressed;
   final Color? bgColor;
@@ -167,7 +167,7 @@ class _GridBtnState extends State<GridBtn> {
 }
 
 class _TileBtn extends StatelessWidget {
-  const _TileBtn(this.label, this.icon, this.onPressed, {Key? key}) : super(key: key);
+  const _TileBtn(this.label, this.icon, this.onPressed, {super.key});
   final String label;
   final AppIcons icon;
   final VoidCallback onPressed;

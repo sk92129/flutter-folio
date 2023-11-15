@@ -6,7 +6,7 @@ import 'package:flutter_folio/views/user_profile_card/user_profile_form.dart';
 
 /// Wraps a [UserProfileForm] with some constraints, and a "slide down" animation.
 class UserProfileCard extends StatelessWidget {
-  const UserProfileCard({Key? key}) : super(key: key);
+  const UserProfileCard({super.key});
 
   @override
   Widget build(BuildContext context) {

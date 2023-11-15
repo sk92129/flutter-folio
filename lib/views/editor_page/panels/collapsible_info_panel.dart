@@ -6,7 +6,7 @@ import 'package:flutter_folio/data/book_data.dart';
 import 'package:flutter_folio/models/books_model.dart';
 
 class CollapsibleInfoPanel extends StatefulWidget {
-  const CollapsibleInfoPanel({Key? key, required this.width, required this.height}) : super(key: key);
+  const CollapsibleInfoPanel({super.key, required this.width, required this.height});
   final double width;
   final double height;
 

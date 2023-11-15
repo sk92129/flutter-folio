@@ -6,8 +6,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'scrap_pile_picker.dart';
 
 class SelectableScrapBtn extends StatelessWidget {
-  const SelectableScrapBtn({Key? key, required this.img, required this.onPressed, this.isSelected = false})
-      : super(key: key);
+  const SelectableScrapBtn({super.key, required this.img, required this.onPressed, this.isSelected = false});
 
   final VoidCallback onPressed;
   final String img;

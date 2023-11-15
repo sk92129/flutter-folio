@@ -10,7 +10,7 @@ import 'package:flutter_folio/views/app_title_bar/rounded_profile_button.dart';
 import 'package:flutter_folio/views/app_title_bar/touch_mode_toggle_btn.dart';
 
 class AppTitleBar extends StatelessWidget {
-  const AppTitleBar({Key? key}) : super(key: key);
+  const AppTitleBar({super.key});
 
   @override
   Widget build(BuildContext context) {

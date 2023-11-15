@@ -13,7 +13,7 @@ import 'content_picker_emoji_panel.dart';
 import 'content_picker_scraps_panel.dart';
 
 class ContentPickerTabMenu extends StatefulWidget {
-  const ContentPickerTabMenu({Key? key, required this.pageId, required this.bookId}) : super(key: key);
+  const ContentPickerTabMenu({super.key, required this.pageId, required this.bookId});
   final String bookId;
   final String? pageId;
 
@@ -106,7 +106,7 @@ class _ContentPickerTabMenuState extends State<ContentPickerTabMenu> {
 }
 
 class AlignAndPad extends StatelessWidget {
-  const AlignAndPad(this.alignment, this.padding, {Key? key, required this.child}) : super(key: key);
+  const AlignAndPad(this.alignment, this.padding, {super.key, required this.child});
   final Alignment alignment;
   final EdgeInsets padding;
   final Widget child;
@@ -117,8 +117,7 @@ class AlignAndPad extends StatelessWidget {
 
 class _ContentPickerTabMenu extends StatefulWidget {
   const _ContentPickerTabMenu(
-      {Key? key, required this.contentType, required this.onPressed, this.isPageSelected = false})
-      : super(key: key);
+      {required this.contentType, required this.onPressed, this.isPageSelected = false});
   final ContentType? contentType;
   final bool isPageSelected;
   final void Function(ContentType type) onPressed;
@@ -168,8 +167,7 @@ class __ContentPickerTabMenuState extends State<_ContentPickerTabMenu> {
 }
 
 class _TabMenuBtn extends StatelessWidget {
-  const _TabMenuBtn({Key? key, required this.icon, this.onPressed, this.isSelected = false, this.tooltip})
-      : super(key: key);
+  const _TabMenuBtn({required this.icon, this.onPressed, this.isSelected = false, this.tooltip});
   final AppIcons icon;
   final VoidCallback? onPressed;
   final bool isSelected;

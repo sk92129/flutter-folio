@@ -38,7 +38,7 @@ class StringUtils {
 
   static String pluralize(String s, int length) {
     if (length == 1) return s;
-    return s + "s";
+    return "${s}s";
   }
 
   static String titleCaseSingle(String s) => '${s[0].toUpperCase()}${s.substring(1)}';

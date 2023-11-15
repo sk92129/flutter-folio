@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class LoadingIndicator extends StatelessWidget {
-  const LoadingIndicator({Key? key, this.size = 30}) : super(key: key);
+  const LoadingIndicator({super.key, this.size = 30});
   final double size;
 
   @override

@@ -6,7 +6,7 @@ import 'package:flutter_folio/views/home_page/book_cover/book_cover.dart';
 
 /// Holds a list of [BookCover] and a Stack that features one of them in a Fullscreen format.
 class CoversFlowListMobile extends StatefulWidget {
-  const CoversFlowListMobile({Key? key, required this.books}) : super(key: key);
+  const CoversFlowListMobile({super.key, required this.books});
   final List<ScrapBookData> books;
 
   @override

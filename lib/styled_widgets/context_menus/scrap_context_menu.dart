@@ -10,7 +10,7 @@ import 'package:flutter_folio/models/books_model.dart';
 import 'package:flutter_folio/styled_widgets/context_menus/context_menu_widgets.dart';
 
 class ScrapContextMenu extends StatefulWidget {
-  const ScrapContextMenu({Key? key, required this.scrap}) : super(key: key);
+  const ScrapContextMenu({super.key, required this.scrap});
   final PlacedScrapItem scrap;
 
   @override

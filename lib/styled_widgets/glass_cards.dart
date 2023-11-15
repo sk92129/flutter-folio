@@ -10,7 +10,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:flutter_folio/models/app_model.dart';
 
 class GlassCard extends StatelessWidget {
-  const GlassCard({Key? key, required this.child, this.alpha = .6, this.radius}) : super(key: key);
+  const GlassCard({super.key, required this.child, this.alpha = .6, this.radius});
   final Widget child;
   final double alpha;
   final BorderRadius? radius;
@@ -35,8 +35,7 @@ class GlassCard extends StatelessWidget {
 
 class CollapsingCard extends StatefulWidget {
   const CollapsingCard(
-      {Key? key, required this.child, required this.height, required this.title, this.icon, this.titleClosed})
-      : super(key: key);
+      {super.key, required this.child, required this.height, required this.title, this.icon, this.titleClosed});
   final Widget child;
   final double height;
   final String title;
@@ -108,14 +107,12 @@ class _CollapsingCardState extends State<CollapsingCard> with TickerProviderStat
 // Button w/ arrow that sits on top of a [CollapsableCard]
 class _CollapsableCardHeader extends StatelessWidget {
   const _CollapsableCardHeader(
-      {Key? key,
-      required this.onPressed,
+      {required this.onPressed,
       required this.height,
       required this.animation,
       required this.isOpen,
       required this.title,
-      this.icon})
-      : super(key: key);
+      this.icon});
   final VoidCallback onPressed;
   final double height;
   final AnimationController animation;

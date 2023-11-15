@@ -16,12 +16,12 @@ import 'package:flutter_folio/views/home_page/book_cover/book_cover_small.dart';
 class BookCoverWidget extends StatefulWidget {
   const BookCoverWidget(
     this.data, {
-    Key? key,
+    super.key,
     this.isSelected = false,
     this.onPressed,
     this.largeMode = false,
     this.topTitle = false,
-  }) : super(key: key);
+  });
   final ScrapBookData data;
   final bool isSelected;
   final bool largeMode;
@@ -128,7 +128,7 @@ class _BookCoverWidgetState extends State<BookCoverWidget> {
 }
 
 class _SideGradient extends StatelessWidget {
-  const _SideGradient(this.color, {Key? key}) : super(key: key);
+  const _SideGradient(this.color);
   final Color color;
 
   @override
@@ -139,7 +139,7 @@ class _SideGradient extends StatelessWidget {
 }
 
 class _BottomGradientLg extends StatelessWidget {
-  const _BottomGradientLg(this.color, {Key? key}) : super(key: key);
+  const _BottomGradientLg(this.color);
   final Color color;
   @override
   Widget build(BuildContext context) {
@@ -157,7 +157,7 @@ class _BottomGradientLg extends StatelessWidget {
 }
 
 class _BottomGradientSm extends StatelessWidget {
-  const _BottomGradientSm(this.color, {Key? key}) : super(key: key);
+  const _BottomGradientSm(this.color);
   final Color color;
   @override
   Widget build(BuildContext context) {

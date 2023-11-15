@@ -7,10 +7,10 @@ import 'package:flutter_folio/data/book_data.dart';
 
 class StyledSharedBtn extends StatelessWidget {
   const StyledSharedBtn({
-    Key? key,
+    super.key,
     required this.book,
     this.iconColor,
-  }) : super(key: key);
+  });
   final Color? iconColor;
   final ScrapBookData book;
 
@@ -29,10 +29,10 @@ class StyledSharedBtn extends StatelessWidget {
         popAnchor: Alignment.centerLeft,
         popChild: const StyledTooltip("Copy Share Link", arrowAlignment: Alignment.centerLeft),
         child: SimpleBtn(
+            onPressed: _handleSharePressed,
             child: Padding(
               padding: EdgeInsets.all(Insets.sm),
               child: Icon(Icons.share, color: iconColor ?? theme.surface1),
-            ),
-            onPressed: _handleSharePressed));
+            )));
   }
 }

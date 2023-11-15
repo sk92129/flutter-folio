@@ -7,7 +7,7 @@ import 'package:flutter_folio/core_packages.dart';
 //TODO: This is a good package / code example / blogpost
 class InlineTextEditor extends StatefulWidget {
   const InlineTextEditor(this.text,
-      {Key? key,
+      {super.key,
       required this.width,
       required this.style,
       this.maxLines = 1,
@@ -20,8 +20,7 @@ class InlineTextEditor extends StatefulWidget {
       this.controller,
       this.enableContextMenu = true,
       this.autoFocus = false,
-      this.maxLength})
-      : super(key: key);
+      this.maxLength});
   final double width;
   final String text;
   final int maxLines;

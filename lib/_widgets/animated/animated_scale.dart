@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedScale extends StatelessWidget {
   const AnimatedScale(
-      {Key? key, required this.child, required this.end, required this.duration, this.begin, this.curve})
-      : super(key: key);
+      {super.key, required this.child, required this.end, required this.duration, this.begin, this.curve});
   final Widget child;
   final Duration duration;
   final double? begin;

@@ -12,7 +12,7 @@ import 'book_cover/book_cover.dart';
 
 /// Holds a list of [BookCover] and a Stack that features one of them in a Fullscreen format.
 class CoversFlowList extends StatefulWidget {
-  const CoversFlowList({Key? key, required this.books}) : super(key: key);
+  const CoversFlowList({super.key, required this.books});
   final List<ScrapBookData> books;
 
   @override
@@ -99,8 +99,8 @@ class _CoversFlowListState extends State<CoversFlowList> {
                       topLeftOffset: _currentCardPos!,
                       closedSize: cardSize,
                       duration: Times.slow,
-                      child: BookCoverWidget(_fgBook!, largeMode: true),
                       onEnd: _handleCardOpened,
+                      child: BookCoverWidget(_fgBook!, largeMode: true),
                     ),
                   ]
                 ],
@@ -203,8 +203,7 @@ class _CoversFlowListState extends State<CoversFlowList> {
 
 class _CollapsingListCard extends StatefulWidget {
   const _CollapsingListCard(this.data,
-      {required this.openWidth, required this.openHeight, required this.onPressed, required this.isSelected, Key? key})
-      : super(key: key);
+      {required this.openWidth, required this.openHeight, required this.onPressed, required this.isSelected, super.key});
 
   final ScrapBookData data;
   final double openWidth;

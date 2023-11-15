@@ -10,8 +10,9 @@ class SaveImageToDiskCommand extends BaseAppCommand {
   Future<void> run(String url) async {
     if (canUse == false) return;
     String fileName = url.split("/").last;
-    final path = await file_selector.getSavePath(acceptedTypeGroups: [
-      XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png'])
+    
+    final path = await file_selector.getSaveLocation(acceptedTypeGroups: [
+      const XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png'])
     ], suggestedName: fileName, confirmButtonText: "Save");
     print(path);
     // if (path != null) {

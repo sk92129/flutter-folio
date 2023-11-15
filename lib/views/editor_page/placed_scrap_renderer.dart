@@ -14,11 +14,11 @@ import '../../_utils/timed/debouncer.dart';
 class PlacedScrapRenderer extends StatelessWidget {
   const PlacedScrapRenderer(
     this.item, {
-    Key? key,
+    super.key,
     required this.isSelected,
     required this.onEditStarted,
     required this.onEditEnded,
-  }) : super(key: key);
+  });
   final PlacedScrapItem item;
   final bool isSelected;
   final VoidCallback onEditStarted;
@@ -59,7 +59,7 @@ class PlacedScrapRenderer extends StatelessWidget {
 }
 
 class _EmojiBox extends StatelessWidget {
-  const _EmojiBox(this.item, {Key? key}) : super(key: key);
+  const _EmojiBox(this.item);
   final PlacedScrapItem item;
 
   @override
@@ -73,7 +73,7 @@ class _EmojiBox extends StatelessWidget {
 }
 
 class _PhotoBox extends StatelessWidget {
-  const _PhotoBox(this.item, {Key? key}) : super(key: key);
+  const _PhotoBox(this.item);
   final PlacedScrapItem item;
 
   @override
@@ -81,8 +81,7 @@ class _PhotoBox extends StatelessWidget {
 }
 
 class _TextBox extends StatefulWidget {
-  const _TextBox(this.item, {Key? key, this.isSelected = false, this.onEditStarted, this.onEditEnded})
-      : super(key: key);
+  const _TextBox(this.item, {this.isSelected = false, this.onEditStarted, this.onEditEnded});
   final PlacedScrapItem item;
   final bool isSelected;
   final VoidCallback? onEditStarted;
@@ -123,36 +122,37 @@ class _TextBoxState extends State<_TextBox> {
           StringUtils.defaultOnEmpty(_txtValue, promptText),
           minFontSize: 10,
           maxFontSize: 999,
-          textBuilder: (size, style, numLines) {
-            style = style.copyWith(color: widget.item.boxStyle?.fgColor ?? Colors.black);
-            TextAlign textAlign = widget.item.boxStyle?.align ?? TextAlign.left;
-            return widget.isSelected
-                ? InlineTextEditor(
-                    widget.item.data,
-                    autoFocus: false,
-                    alignVertical: TextAlignVertical.center,
-                    align: textAlign,
-                    width: constraints.maxWidth,
-                    promptText: promptText,
-                    maxLines: 99,
-                    enableContextMenu: false,
-                    onFocusOut: _handleTextChanged,
-                    // SB: Due to a bug in Flutter where we were missing focusOut events, we're saving on every keystroke for this editor.// TODO: Try and get reproduction steps for this...
-                    onChanged: _handleTextChanged,
-                    style: style.copyWith(fontSize: size, fontFamily: boxFontToFamily(widget.item.boxStyle?.font)),
-                  )
-                : Container(
-                    alignment: Alignment.center,
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: Text(StringUtils.defaultOnEmpty(widget.item.data, promptText),
-                          style:
-                              style.copyWith(fontSize: size, fontFamily: boxFontToFamily(widget.item.boxStyle?.font)),
-                          maxLines: 99,
-                          textAlign: textAlign),
-                    ),
-                  );
-          },
+          
+          // textBuilder: (size, style, numLines) {
+          //   style = style.copyWith(color: widget.item.boxStyle?.fgColor ?? Colors.black);
+          //   TextAlign textAlign = widget.item.boxStyle?.align ?? TextAlign.left;
+          //   return widget.isSelected
+          //       ? InlineTextEditor(
+          //           widget.item.data,
+          //           autoFocus: false,
+          //           alignVertical: TextAlignVertical.center,
+          //           align: textAlign,
+          //           width: constraints.maxWidth,
+          //           promptText: promptText,
+          //           maxLines: 99,
+          //           enableContextMenu: false,
+          //           onFocusOut: _handleTextChanged,
+          //           // SB: Due to a bug in Flutter where we were missing focusOut events, we're saving on every keystroke for this editor.// TODO: Try and get reproduction steps for this...
+          //           onChanged: _handleTextChanged,
+          //           style: style.copyWith(fontSize: size, fontFamily: boxFontToFamily(widget.item.boxStyle?.font)),
+          //         )
+          //       : Container(
+          //           alignment: Alignment.center,
+          //           child: SizedBox(
+          //             width: double.infinity,
+          //             child: Text(StringUtils.defaultOnEmpty(widget.item.data, promptText),
+          //                 style:
+          //                     style.copyWith(fontSize: size, fontFamily: boxFontToFamily(widget.item.boxStyle?.font)),
+          //                 maxLines: 99,
+          //                 textAlign: textAlign),
+          //           ),
+          //         );
+          // },
           style: const TextStyle(fontSize: 999, letterSpacing: 0, height: 1.25),
         );
       }),

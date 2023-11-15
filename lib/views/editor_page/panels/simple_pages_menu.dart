@@ -7,7 +7,7 @@ import 'package:flutter_folio/data/book_data.dart';
 import 'package:flutter_folio/models/app_model.dart';
 
 class SimplePagesMenu extends StatelessWidget {
-  const SimplePagesMenu(this.pages, {required this.selectedPageId, Key? key}) : super(key: key);
+  const SimplePagesMenu(this.pages, {required this.selectedPageId, super.key});
 
   final String? selectedPageId;
   final List<ScrapPageData> pages;

@@ -7,7 +7,7 @@ class HomeNavTabMenu extends StatelessWidget {
   final bool showListView;
   final void Function(bool) onToggled;
 
-  const HomeNavTabMenu({this.showListView = true, required this.onToggled, Key? key}) : super(key: key);
+  const HomeNavTabMenu({this.showListView = true, required this.onToggled, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +98,7 @@ class _NewFolioFab extends StatelessWidget {
 }
 
 class _NewFolioCard extends StatefulWidget {
-  const _NewFolioCard({Key? key}) : super(key: key);
+  const _NewFolioCard();
 
   @override
   _NewFolioCardState createState() => _NewFolioCardState();

@@ -5,7 +5,7 @@ class ContextMenuIcon extends StatelessWidget {
   final AppIcons icon;
   final Color? color;
 
-  const ContextMenuIcon({Key? key, required this.icon, this.color}) : super(key: key);
+  const ContextMenuIcon({super.key, required this.icon, this.color});
   @override
   Widget build(BuildContext context) {
     AppTheme theme = context.watch();
@@ -14,7 +14,7 @@ class ContextMenuIcon extends StatelessWidget {
 }
 
 class ContextMenuIconHovered extends StatelessWidget {
-  const ContextMenuIconHovered({Key? key, required this.icon}) : super(key: key);
+  const ContextMenuIconHovered({super.key, required this.icon});
   final AppIcons icon;
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class ContextMenuIconHovered extends StatelessWidget {
 }
 
 class ContextDivider extends StatelessWidget {
-  const ContextDivider({Key? key}) : super(key: key);
+  const ContextDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

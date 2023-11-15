@@ -7,7 +7,7 @@ import 'package:flutter_folio/core_packages.dart';
 
 class MovableScrapSelectionBox extends StatefulWidget {
   const MovableScrapSelectionBox(
-      {Key? key,
+      {super.key,
       required this.child,
       required this.onZoomed,
       required this.onCornerDrag,
@@ -15,8 +15,7 @@ class MovableScrapSelectionBox extends StatefulWidget {
       required this.onRotateDrag,
       required this.btnSize,
       this.isVisible = false,
-      required this.showControls})
-      : super(key: key);
+      required this.showControls});
   final Widget child;
   final void Function(double delta) onZoomed;
   final void Function(Offset delta) onCornerDrag;
@@ -98,7 +97,7 @@ class MovableScrapSelectionBoxState extends State<MovableScrapSelectionBox> {
 }
 
 class _Handle extends StatelessWidget {
-  const _Handle(this.widget, {Key? key, required this.onPanUpdate, required this.onPanEnd}) : super(key: key);
+  const _Handle(this.widget, {required this.onPanUpdate, required this.onPanEnd});
   final MovableScrapSelectionBox widget;
   final void Function(Offset delta) onPanUpdate;
   final void Function() onPanEnd;

@@ -14,7 +14,7 @@ import 'package:flutter_folio/services/cloudinary/cloud_storage_service.dart';
 /// A form to edit the current users details or logout. It is shown in a pop up panel on desktop,
 /// and a bottom sheet on mobile.
 class UserProfileForm extends StatefulWidget {
-  const UserProfileForm({this.bottomSheet = false, Key? key}) : super(key: key);
+  const UserProfileForm({this.bottomSheet = false, super.key});
 
   final bool bottomSheet;
 
@@ -47,7 +47,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
 
     return Stack(
       children: [
-        Align(alignment: Alignment.topLeft, child: UiText(text: "v" + AppModel.kVersion, style: TextStyles.caption)),
+        Align(alignment: Alignment.topLeft, child: UiText(text: "v${AppModel.kVersion}", style: TextStyles.caption)),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

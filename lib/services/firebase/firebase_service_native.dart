@@ -49,12 +49,24 @@ class NativeFirebaseService extends FirebaseService {
   @override
   bool get isSignedIn => _isSignedIn;
 
+
+/**
+ * 
+ *     return _getDoc(keys)?.snapshots().map((doc) {
+      final data = doc.data() ?? {};
+      return data..['documentId'] = doc.id;
+    });
+ * 
+ */
+
   // Streams
   @override
   Stream<Map<String, dynamic>>? getDocStream(List<String> keys) {
     return _getDoc(keys)?.snapshots().map((doc) {
-      final data = doc.data() ?? {};
-      return data..['documentId'] = doc.id;
+      final  data = doc.data() ?? <String>{};
+      final dataMap = data as Map<String, dynamic>;
+      //dataMap['documentId'] = doc.id ;
+      return dataMap..['documentId'] = doc.id ;
     });
   }
 
@@ -62,10 +74,15 @@ class NativeFirebaseService extends FirebaseService {
   Stream<List<Map<String, dynamic>>>? getListStream(List<String> keys) {
     return _getCollection(keys)?.snapshots().map(
       (QuerySnapshot snapshot) {
-        return snapshot.docs.map((d) {
-          final data = d.data();
+        final snapshotMap = snapshot as QuerySnapshot;
+        final List<QueryDocumentSnapshot<Object?>> list = snapshotMap.docs;
+        
+        final List<Object> reslist = list.map((d) {
+          final data = d.data() as Map;
           return data..['documentId'] = d.id;
         }).toList();
+        final reslist2 = reslist as List<Map<String, dynamic>>;
+        return reslist2;
       },
     );
   }
@@ -99,7 +116,12 @@ class NativeFirebaseService extends FirebaseService {
     try {
       DocumentSnapshot? d = (await _getDoc(keys)?.get());
       if (d != null) {
-        return (d.data() ?? {})..['documentId'] = d.id;
+        Map<String, dynamic> map = {};
+        if (d.data() != null){
+          map = d.data() as Map<String, dynamic>;
+        } 
+        
+        return (map)..['documentId'] = d.id;
       }
     } catch (e) {
       print(e);
@@ -113,10 +135,17 @@ class NativeFirebaseService extends FirebaseService {
     QuerySnapshot? snapshot = (await _getCollection(keys)?.get());
     if (snapshot != null) {
       for (final d in snapshot.docs) {
-        (d.data())['documentId'] = d.id;
+        Map<String, dynamic> map = {};
+        if (d.data() != null){
+          map = d.data() as Map<String, dynamic>;
+        } 
+
+        map['documentId'] = d.id;
       }
     }
-    return snapshot?.docs.map((d) => (d.data())).toList();
+    final mylist = snapshot?.docs.map((d) => (d.data())).toList() as List<Map<String, dynamic>>;
+
+    return mylist;
   }
 
   DocumentReference? _getDoc(List<String> keys) {

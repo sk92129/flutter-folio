@@ -13,7 +13,7 @@ import 'home_nav_bar.dart';
 import 'home_nav_bar_mobile.dart';
 
 class BooksHomePage extends StatefulWidget {
-  const BooksHomePage({Key? key}) : super(key: key);
+  const BooksHomePage({super.key});
 
   @override
   BooksHomePageState createState() => BooksHomePageState();

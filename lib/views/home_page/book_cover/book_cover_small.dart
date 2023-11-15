@@ -4,7 +4,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:flutter_folio/data/book_data.dart';
 
 class SmallBookCover extends StatelessWidget {
-  const SmallBookCover(this.book, {Key? key, this.topTitle = false}) : super(key: key);
+  const SmallBookCover(this.book, {super.key, this.topTitle = false});
   final ScrapBookData book;
   final bool topTitle;
 

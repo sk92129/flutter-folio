@@ -17,8 +17,7 @@ class CoversSortableList extends StatefulWidget {
   final List<ScrapBookData> books;
   final double rowHeight;
   final bool isMobile;
-  const CoversSortableList({Key? key, required this.books, this.rowHeight = 120, this.isMobile = false})
-      : super(key: key);
+  const CoversSortableList({super.key, required this.books, this.rowHeight = 120, this.isMobile = false});
 
   @override
   State createState() => _CoversSortableListState();
@@ -158,7 +157,7 @@ class _CoversSortableListState extends State<CoversSortableList> {
 }
 
 class SortableListHeader extends StatelessWidget {
-  const SortableListHeader(this.label, {Key? key, required this.sortDir, required this.onPressed}) : super(key: key);
+  const SortableListHeader(this.label, {super.key, required this.sortDir, required this.onPressed});
   final String label;
   final int sortDir;
   final VoidCallback onPressed;
@@ -205,8 +204,7 @@ class SortableListRow extends StatelessWidget {
   final bool showCreated;
 
   const SortableListRow(this.book,
-      {Key? key, required this.onPressed, this.showModified = false, this.showCreated = false})
-      : super(key: key);
+      {super.key, required this.onPressed, this.showModified = false, this.showCreated = false});
   @override
   Widget build(BuildContext context) {
     AppTheme theme = context.watch();

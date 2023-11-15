@@ -7,7 +7,7 @@ import 'package:flutter_folio/views/editor_page/scrap_popup_editor/animated_menu
 import 'package:flutter_folio/views/editor_page/scrap_popup_editor/scrap_popup_editor.dart';
 
 class PopupPanelSpike extends StatefulWidget {
-  const PopupPanelSpike({Key? key}) : super(key: key);
+  const PopupPanelSpike({super.key});
 
   @override
   _PopupPanelSpikeState createState() => _PopupPanelSpikeState();
@@ -149,7 +149,7 @@ class _ExamplePopupPanelState extends State<_ExamplePopupPanel> {
 }
 
 class Content extends StatelessWidget {
-  const Content(this.lbl, this.color, {Key? key, required this.isOpen}) : super(key: key);
+  const Content(this.lbl, this.color, {super.key, required this.isOpen});
   final bool isOpen;
   final Color color;
   final String lbl;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DecoratedContainer extends StatelessWidget {
   const DecoratedContainer({
-    Key? key,
+    super.key,
     this.color,
     this.borderColor = Colors.transparent,
     this.borderWidth = 0,
@@ -15,7 +15,7 @@ class DecoratedContainer extends StatelessWidget {
     this.clipChild = false,
     this.padding,
     this.alignment,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final Color? borderColor;

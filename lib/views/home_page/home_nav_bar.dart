@@ -7,12 +7,11 @@ import 'package:flutter_folio/models/books_model.dart';
 
 class HomeNavToggleMenu extends StatelessWidget {
   const HomeNavToggleMenu(
-      {Key? key,
+      {super.key,
       this.invertText = false,
       required this.onToggled,
       required this.showListView,
-      this.hideButtons = false})
-      : super(key: key);
+      this.hideButtons = false});
   final void Function(bool value) onToggled;
   final bool showListView;
   final bool invertText;
@@ -37,7 +36,7 @@ class HomeNavToggleMenu extends StatelessWidget {
                   style:
                       TextStyles.body1.copyWith(height: 1.2, color: showListView ? theme.greyMedium : theme.surface1),
                   children: <TextSpan>[
-                    if (name != null) TextSpan(text: " " + name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                    if (name != null) TextSpan(text: " $name", style: const TextStyle(fontWeight: FontWeight.bold)),
                     TextSpan(text: ". ${breakText ? "\n" : ""}You've created "),
                     TextSpan(
                         text: " $bookCount folio${bookCount == 1 ? "" : "s"}",

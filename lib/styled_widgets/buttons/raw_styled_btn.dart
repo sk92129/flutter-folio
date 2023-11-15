@@ -19,7 +19,7 @@ enum BtnTheme { Primary, Secondary, Raw }
 // It takes care of adding a visual indicator  when the btn is Focused.
 class RawBtn extends StatefulWidget {
   const RawBtn(
-      {Key? key,
+      {super.key,
       required this.child,
       required this.onPressed,
       this.normalColors,
@@ -29,8 +29,7 @@ class RawBtn extends StatefulWidget {
       this.enableShadow = true,
       this.enableFocus = true,
       this.ignoreDensity = false,
-      this.cornerRadius})
-      : super(key: key);
+      this.cornerRadius});
   final Widget child;
   final VoidCallback? onPressed;
   final BtnColors? normalColors;
@@ -135,8 +134,7 @@ class _RawBtnState extends State<RawBtn> {
 // Accepts label, icon and child, with child taking precedence.
 class BtnContent extends StatelessWidget {
   const BtnContent(
-      {Key? key, this.label, this.icon, this.child, this.leadingIcon = false, this.isCompact = false, this.labelStyle})
-      : super(key: key);
+      {super.key, this.label, this.icon, this.child, this.leadingIcon = false, this.isCompact = false, this.labelStyle});
   final bool leadingIcon;
   final bool isCompact;
   final Widget? child;

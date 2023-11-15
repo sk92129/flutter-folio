@@ -79,7 +79,7 @@ class BootstrapCommand extends commands.BaseAppCommand {
         log(e.toString());
       }
     }
-    imageCache?.maximumSizeBytes = cacheSize;
+    imageCache.maximumSizeBytes = cacheSize;
   }
 
   void _configureDesktop() {

@@ -9,7 +9,7 @@ import 'package:flutter_folio/data/book_data.dart';
 import 'package:flutter_folio/models/books_model.dart';
 
 class ScrapPopupPanelButtonStrip extends StatefulWidget {
-  const ScrapPopupPanelButtonStrip({Key? key, required this.scrap}) : super(key: key);
+  const ScrapPopupPanelButtonStrip({super.key, required this.scrap});
   final PlacedScrapItem scrap;
 
   @override
@@ -67,7 +67,7 @@ class _ScrapPopupPanelButtonStripState extends State<ScrapPopupPanelButtonStrip>
 }
 
 class _IconBtn extends StatelessWidget {
-  const _IconBtn({Key? key, this.onPressed, required this.icon, this.isSelected = false}) : super(key: key);
+  const _IconBtn({this.onPressed, required this.icon, this.isSelected = false});
   final VoidCallback? onPressed;
   final AppIcons icon;
   final bool isSelected;
@@ -77,11 +77,11 @@ class _IconBtn extends StatelessWidget {
     AppTheme theme = context.watch();
     return Flexible(
       child: SimpleBtn(
+        onPressed: onPressed,
         child: SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: AppIcon(icon, color: isSelected ? theme.accent1 : theme.greyStrong, size: 16)),
-        onPressed: onPressed,
       ),
     );
   }

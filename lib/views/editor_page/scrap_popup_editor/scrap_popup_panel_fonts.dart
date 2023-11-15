@@ -11,8 +11,7 @@ class ScrapPopupPanelFonts extends StatelessWidget {
   final BoxFonts value;
   final void Function(BoxFonts value) onFamilyChanged;
   const ScrapPopupPanelFonts(
-      {Key? key, required this.isOpen, this.value = BoxFonts.AlfaSlabOne, required this.onFamilyChanged})
-      : super(key: key);
+      {super.key, required this.isOpen, this.value = BoxFonts.AlfaSlabOne, required this.onFamilyChanged});
   @override
   Widget build(BuildContext context) {
     AppTheme theme = context.watch();
@@ -55,6 +54,7 @@ class ScrapPopupPanelFonts extends StatelessWidget {
                     const PanelHeader(label: "Font"),
                     VSpace(Insets.sm),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(child: _FontBtn(value, font: BoxFonts.Caveat, onPressed: onFamilyChanged)),
                         HSpace(Insets.sm),
@@ -64,7 +64,6 @@ class ScrapPopupPanelFonts extends StatelessWidget {
                         HSpace(Insets.sm),
                         Expanded(child: _FontBtn(value, font: BoxFonts.Amiri, onPressed: onFamilyChanged)),
                       ],
-                      mainAxisAlignment: MainAxisAlignment.center,
                     ),
                     VSpace(Insets.sm),
                     Row(
@@ -89,7 +88,7 @@ class ScrapPopupPanelFonts extends StatelessWidget {
 }
 
 class _FontBtn extends StatelessWidget {
-  const _FontBtn(this.currentValue, {Key? key, required this.font, required this.onPressed}) : super(key: key);
+  const _FontBtn(this.currentValue, {required this.font, required this.onPressed});
   final BoxFonts font;
   final void Function(BoxFonts) onPressed;
   final BoxFonts currentValue;

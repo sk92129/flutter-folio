@@ -6,7 +6,7 @@ import 'package:flutter_folio/data/book_data.dart';
 
 /// An image that falls back to a placeholder img
 class BookCoverImage extends StatefulWidget {
-  const BookCoverImage(this.data, {Key? key}) : super(key: key);
+  const BookCoverImage(this.data, {super.key});
   final ScrapBookData data;
 
   @override

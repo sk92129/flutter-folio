@@ -5,7 +5,7 @@ import 'package:flutter_folio/core_packages.dart';
 
 class LabeledTextInput extends StatefulWidget {
   const LabeledTextInput(
-      {Key? key,
+      {super.key,
       this.text,
       this.label = "",
       this.onChanged,
@@ -18,8 +18,7 @@ class LabeledTextInput extends StatefulWidget {
       this.autofillHints,
       this.obscureText = false,
       this.autoFocus = false,
-      this.maxLength})
-      : super(key: key);
+      this.maxLength});
 
   final String label;
   final String? text;

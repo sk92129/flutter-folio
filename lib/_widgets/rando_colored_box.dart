@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:random_color/random_color.dart';
 
 class RandoColoredBox extends StatelessWidget {
-  const RandoColoredBox({required this.child, Key? key}) : super(key: key);
+  const RandoColoredBox({required this.child, super.key});
   final Widget child;
   @override
   Widget build(BuildContext context) {

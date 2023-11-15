@@ -15,8 +15,7 @@ class BoxTransformData extends ChangeNotifier {
 
 class MyMovableBox extends StatelessWidget {
   const MyMovableBox(
-      {Key? key, required this.child, required this.data, this.onMoveStarted, this.onMoveUpdated, this.onScaleUpdated})
-      : super(key: key);
+      {super.key, required this.child, required this.data, this.onMoveStarted, this.onMoveUpdated, this.onScaleUpdated});
   final BoxTransformData data;
   final void Function(BoxTransformData)? onMoveStarted;
   final void Function(BoxTransformData, Offset)? onMoveUpdated;

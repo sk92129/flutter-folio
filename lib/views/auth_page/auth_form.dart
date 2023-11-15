@@ -10,7 +10,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AuthForm extends StatefulWidget {
-  const AuthForm({Key? key}) : super(key: key);
+  const AuthForm({super.key});
 
   @override
   _AuthFormState createState() => _AuthFormState();
@@ -181,15 +181,15 @@ class _AuthFormState extends State<AuthForm> with LoadingStateMixin {
                                         contextMenu:
                                             const LinkContextMenu(url: 'https://github.com/gskinnerTeam/flutter-folio'),
                                         child: SimpleBtn(
-                                          child: AppIcon(AppIcons.website, color: theme.greyStrong, size: 24),
                                           onPressed: _handleWebsitePressed,
+                                          child: AppIcon(AppIcons.website, color: theme.greyStrong, size: 24),
                                         ),
                                       ),
                                       ContextMenuRegion(
                                         contextMenu: const LinkContextMenu(url: "https://flutter.gskinner.com"),
                                         child: SimpleBtn(
-                                          child: AppIcon(AppIcons.github, color: theme.greyStrong, size: 24),
                                           onPressed: _handleGitPressed,
+                                          child: AppIcon(AppIcons.github, color: theme.greyStrong, size: 24),
                                         ),
                                       ),
                                     ],

@@ -12,8 +12,7 @@ import 'package:flutter_folio/data/book_data.dart';
 import 'package:flutter_folio/views/scrap_pile_picker/scrap_pile_picker.dart';
 
 class ContentPickerScrapsPanel extends StatefulWidget {
-  const ContentPickerScrapsPanel({Key? key, required this.bookId, this.isVisible = false, required this.pageId})
-      : super(key: key);
+  const ContentPickerScrapsPanel({super.key, required this.bookId, this.isVisible = false, required this.pageId});
   final String bookId;
   final String? pageId;
   final bool isVisible;
@@ -128,8 +127,7 @@ class _ContentPickerScrapsPanelState extends State<ContentPickerScrapsPanel> wit
 }
 
 class _PanelBottomBar extends StatelessWidget {
-  const _PanelBottomBar({Key? key, this.onAddPressed, this.onDeletePressed, required this.selectionCount})
-      : super(key: key);
+  const _PanelBottomBar({this.onAddPressed, this.onDeletePressed, required this.selectionCount});
   final VoidCallback? onAddPressed;
   final VoidCallback? onDeletePressed;
   final int selectionCount;

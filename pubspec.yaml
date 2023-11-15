@@ -4,40 +4,37 @@ publish_to: "none"
 version: 1.2.3
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=3.1.0 <4.0.0'    # this is for Dart
 
 dependencies:
   flutter:
     sdk: flutter
 
   anchored_popups: ^0.1.0
-  animate_do: ^2.0.0
-  auto_size_text:
-    git:
-      url: git://github.com/gskinnerTeam/auto_size_text.git
-      ref: 8800276218b053265ffc796a24e84820bebaaeac
+  animate_do: ^3.1.2
+  auto_size_text: ^3.0.0
   bitsdojo_window: ^0.1.0+1
   cached_network_image: ^3.0.0
-  cloudinary_public: ^0.8.0
-  context_menus: ^0.1.0+5
-  darq: ^1.0.0-dev.3
+  cloudinary_public: ^0.21.0
+  context_menus: ^1.0.2
+  darq: ^2.0.0
   desktop_window: ^0.4.0
   dotted_border: ^2.0.0-nullsafety.0
   email_validator: ^2.0.1
   enum_to_string: ^2.0.0-nullsafety.1
   flutter_lorem: ^2.0.0
-  flextras: ^0.0.1
-  file_selector: ^0.8.2
-  file_selector_windows: ^0.0.2
-  file_selector_macos: ^0.0.4
-  file_selector_linux: ^0.0.2
-  file_selector_web: ^0.8.1
-  flutter_svg: ^0.22.0
-  image_picker: ^0.8.0+4
-  image_size_getter: ^1.0.0
+  flextras: ^1.0.0
+  file_selector: ^1.0.1
+  file_selector_windows: ^0.9.3+1
+  file_selector_macos: ^0.9.3+3
+  file_selector_linux: ^0.9.2+1
+  file_selector_web: ^0.9.2+1
+  flutter_svg: ^2.0.9
+  image_picker: ^1.0.4
+  image_size_getter: ^2.1.2
   multi_image_picker: ^4.8.00
   path_provider: ^2.0.1
-  provider: ^5.0.0
+  provider: ^6.1.1
   random_color: ^1.0.6-nullsafety
   sized_context: ^1.0.0+1
   shared_preferences: ^2.0.4
@@ -47,14 +44,14 @@ dependencies:
   timeago: ^3.0.2
   universal_platform: ^1.0.0-nullsafety
   url_launcher: ^6.0.2
-  uuid: ^3.0.1
-  visibility_detector: ^0.2.2
+  uuid: ^4.2.1
+  visibility_detector: ^0.4.0+2
 
   # FIREBASE
   firedart: ^0.9.0+1
-  firebase_core: ^1.0.1
-  firebase_auth: ^1.0.1
-  cloud_firestore: ^1.0.1
+  firebase_core: ^2.22.0
+  firebase_auth: ^4.14.0
+  cloud_firestore: ^4.13.1
 
 dev_dependencies:
   # sample build cmd
@@ -65,12 +62,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  flutter_lints: ^1.0.0
-  freezed: ^0.14.1
-  freezed_annotation: ^0.14.1
+  flutter_lints: ^3.0.1
+  freezed: ^2.4.5
+  freezed_annotation: ^2.4.1
   json_serializable:
-  flutter_launcher_icons: ^0.9.0
-  msix: ^2.8.13
+  flutter_launcher_icons: ^0.13.1
+  msix: ^3.16.6
 
 msix_config:
   display_name: Flutter Folio

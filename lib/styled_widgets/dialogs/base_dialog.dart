@@ -6,7 +6,7 @@ class BaseStyledDialog extends StatelessWidget {
   final EdgeInsets? padding;
   final Widget child;
 
-  const BaseStyledDialog({Key? key, required this.child, this.bgColor, this.padding}) : super(key: key);
+  const BaseStyledDialog({super.key, required this.child, this.bgColor, this.padding});
   @override
   Widget build(BuildContext context) {
     var theme = context.watch<AppTheme>();

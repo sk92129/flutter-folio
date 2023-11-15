@@ -54,7 +54,7 @@ void main() async {
 
 // Bootstrap the app, initializing all Controllers and Services
 class AppBootstrapper extends StatefulWidget {
-  const AppBootstrapper({Key? key}) : super(key: key);
+  const AppBootstrapper({super.key});
 
   @override
   _AppBootstrapperState createState() => _AppBootstrapperState();

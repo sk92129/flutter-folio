@@ -3,7 +3,7 @@ import 'package:flutter_folio/_widgets/decorated_container.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class ShadowedBg extends StatelessWidget {
-  const ShadowedBg(this.color, {Key? key, this.ignorePointer = true}) : super(key: key);
+  const ShadowedBg(this.color, {super.key, this.ignorePointer = true});
   final Color color;
   final bool ignorePointer;
 

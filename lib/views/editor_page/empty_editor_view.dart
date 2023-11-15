@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class EmptyEditorView extends StatelessWidget {
-  const EmptyEditorView({Key? key, required this.readOnly}) : super(key: key);
+  const EmptyEditorView({super.key, required this.readOnly});
   final bool readOnly;
 
   @override

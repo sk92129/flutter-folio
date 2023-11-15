@@ -12,12 +12,12 @@ class MeasureSizeRenderObject extends RenderProxyBox {
     Size newSize = child?.size ?? Size.zero;
     if (_prevSize == newSize) return;
     _prevSize = newSize;
-    WidgetsBinding.instance?.addPostFrameCallback((_) => onChange(newSize));
+    WidgetsBinding.instance.addPostFrameCallback((_) => onChange(newSize));
   }
 }
 
 class MeasureSize extends SingleChildRenderObjectWidget {
-  const MeasureSize({Key? key, required this.onChange, required Widget child}) : super(key: key, child: child);
+  const MeasureSize({super.key, required this.onChange, required Widget super.child});
   final void Function(Size size) onChange;
   @override
   RenderObject createRenderObject(BuildContext context) => MeasureSizeRenderObject(onChange);

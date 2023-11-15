@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class ScrapPopupPanelAlignment extends StatelessWidget {
-  const ScrapPopupPanelAlignment({Key? key, this.onAlignmentPressed, required this.value}) : super(key: key);
+  const ScrapPopupPanelAlignment({super.key, this.onAlignmentPressed, required this.value});
   final void Function(TextAlign value)? onAlignmentPressed;
   final TextAlign value;
 
@@ -41,7 +41,7 @@ class ScrapPopupPanelAlignment extends StatelessWidget {
 }
 
 class _AlignmentBtn extends StatelessWidget {
-  const _AlignmentBtn(this.icon, {Key? key, this.onPressed, this.isSelected = false}) : super(key: key);
+  const _AlignmentBtn(this.icon, {this.onPressed, this.isSelected = false});
   final IconData icon;
   final VoidCallback? onPressed;
   final bool isSelected;

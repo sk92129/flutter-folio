@@ -5,7 +5,7 @@ import 'package:flutter_folio/_widgets/decorated_container.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class StyledTooltip extends StatelessWidget {
-  const StyledTooltip(this.label, {Key? key, this.arrowAlignment = Alignment.topCenter}) : super(key: key);
+  const StyledTooltip(this.label, {super.key, this.arrowAlignment = Alignment.topCenter});
   final String label;
   final Alignment arrowAlignment;
 
@@ -41,7 +41,7 @@ class StyledTooltip extends StatelessWidget {
 }
 
 class _Arrow extends StatelessWidget {
-  const _Arrow(this.color, {Key? key}) : super(key: key);
+  const _Arrow(this.color);
   final Color color;
 
   @override

@@ -3,7 +3,7 @@ import 'package:flutter_folio/_widgets/decorated_container.dart';
 import 'package:flutter_folio/styles.dart';
 
 class RoundedCard extends StatelessWidget {
-  const RoundedCard({Key? key, required this.child, this.radius}) : super(key: key);
+  const RoundedCard({super.key, required this.child, this.radius});
   final Widget child;
   final double? radius;
 
@@ -15,8 +15,7 @@ class RoundedCard extends StatelessWidget {
 }
 
 class RoundedBorder extends StatelessWidget {
-  const RoundedBorder({Key? key, this.color, this.width, this.radius, this.ignorePointer = true, this.child})
-      : super(key: key);
+  const RoundedBorder({super.key, this.color, this.width, this.radius, this.ignorePointer = true, this.child});
   final Color? color;
   final double? width;
   final double? radius;

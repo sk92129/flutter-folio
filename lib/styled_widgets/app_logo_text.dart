@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class AppLogoText extends StatelessWidget {
-  const AppLogoText({Key? key, this.constraints, this.color}) : super(key: key);
+  const AppLogoText({super.key, this.constraints, this.color});
   final BoxConstraints? constraints;
   final Color? color;
 

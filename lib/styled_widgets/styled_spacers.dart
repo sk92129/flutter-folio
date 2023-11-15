@@ -4,7 +4,7 @@ import 'package:flutter_folio/core_packages.dart';
 class VSpace extends StatelessWidget {
   final double size;
 
-  const VSpace(this.size, {Key? key}) : super(key: key);
+  const VSpace(this.size, {super.key});
 
   @override
   Widget build(BuildContext context) => SizedBox(height: size);
@@ -19,7 +19,7 @@ class VSpace extends StatelessWidget {
 class HSpace extends StatelessWidget {
   final double size;
 
-  const HSpace(this.size, {Key? key}) : super(key: key);
+  const HSpace(this.size, {super.key});
 
   @override
   Widget build(BuildContext context) => SizedBox(width: size);

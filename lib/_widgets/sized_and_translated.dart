@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class SizedAndTranslated extends StatelessWidget {
   const SizedAndTranslated({
-    Key? key,
+    super.key,
     required this.size,
     required this.offset,
     required this.child,
     this.pivotPoint,
-  }) : super(key: key);
+  });
   final Size size;
   final Offset offset;
   final Widget child;

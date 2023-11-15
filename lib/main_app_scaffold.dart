@@ -8,7 +8,7 @@ import 'package:flutter_folio/views/app_title_bar/app_title_bar.dart';
 
 /// Wraps the entire app, providing it with various helper classes and wrapper widgets.
 class MainAppScaffold extends StatefulWidget {
-  const MainAppScaffold({Key? key, required this.pageNavigator, required this.showAppBar}) : super(key: key);
+  const MainAppScaffold({super.key, required this.pageNavigator, required this.showAppBar});
   final Widget pageNavigator;
   final bool showAppBar;
 
@@ -87,7 +87,7 @@ class _MainAppScaffoldState extends State<MainAppScaffold> with TickerProviderSt
 }
 
 class _WindowBorder extends StatelessWidget {
-  const _WindowBorder({Key? key, required this.child, required this.color}) : super(key: key);
+  const _WindowBorder({required this.child, required this.color});
   final Widget child;
   final Color color;
 

@@ -7,13 +7,13 @@ class AnimatedMenuPanel extends StatefulWidget {
   const AnimatedMenuPanel(
     this.closedPos,
     this.closedSize, {
-    Key? key,
+    super.key,
     required this.openHeight,
     required this.isOpen,
     this.isVisible = true,
     this.onPressed,
     required this.childBuilder,
-  }) : super(key: key);
+  });
   final Offset closedPos;
   final Size closedSize;
   final double openHeight;

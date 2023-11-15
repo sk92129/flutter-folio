@@ -4,7 +4,7 @@ import 'package:flutter_folio/_widgets/decorated_container.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class StyledCircleImage extends StatelessWidget {
-  const StyledCircleImage({Key? key, required this.url, this.padding}) : super(key: key);
+  const StyledCircleImage({super.key, required this.url, this.padding});
 
   final EdgeInsets? padding;
   final String url;

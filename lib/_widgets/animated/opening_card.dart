@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 // Relies on Tranform.translate() and SizedBox to move and size the Child
 class OpeningContainer extends StatefulWidget {
   const OpeningContainer({
-    Key? key,
+    super.key,
     required this.onEnd,
     required this.child,
     this.topLeftOffset,
@@ -14,7 +14,7 @@ class OpeningContainer extends StatefulWidget {
     this.duration = const Duration(milliseconds: 350),
     this.curve = Curves.easeOut,
     this.isOpen = true,
-  }) : super(key: key);
+  });
 
   final VoidCallback onEnd;
   final Widget child;

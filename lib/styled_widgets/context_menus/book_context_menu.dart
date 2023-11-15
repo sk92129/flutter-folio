@@ -8,7 +8,7 @@ import 'package:flutter_folio/data/book_data.dart';
 import 'package:flutter_folio/styled_widgets/context_menus/context_menu_widgets.dart';
 
 class BookContextMenu extends StatefulWidget {
-  const BookContextMenu(this.book, {Key? key}) : super(key: key);
+  const BookContextMenu(this.book, {super.key});
   final ScrapBookData book;
 
   @override

@@ -10,7 +10,7 @@ import 'package:flutter_folio/models/app_model.dart';
 /// For example, if a user is in high density mode, using their finger, we provide a low-density (large) visual hit area for the finger
 /// Conversely, if a user in in low density mode, using a mouse, we provide a high-density (small)  visual hit area for the mouse
 class TouchModeToggleBtn extends StatefulWidget {
-  const TouchModeToggleBtn({Key? key, required this.invertPopupAlign}) : super(key: key);
+  const TouchModeToggleBtn({super.key, required this.invertPopupAlign});
   final bool invertPopupAlign;
   @override
   _TouchModeToggleBtnState createState() => _TouchModeToggleBtnState();

@@ -7,8 +7,7 @@ import 'package:flutter_folio/core_packages.dart';
 import 'package:flutter_folio/data/book_data.dart';
 
 class ContentPickerEmojiPanel extends StatefulWidget {
-  const ContentPickerEmojiPanel({Key? key, required this.isVisible, required this.bookId, required this.pageId})
-      : super(key: key);
+  const ContentPickerEmojiPanel({super.key, required this.isVisible, required this.bookId, required this.pageId});
   final bool isVisible;
   final String? pageId;
   final String bookId;

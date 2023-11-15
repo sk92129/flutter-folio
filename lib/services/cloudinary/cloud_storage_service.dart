@@ -24,7 +24,10 @@ class CloudStorageService {
     else if (images.first.asset != null) {
       print("Uploade from future bytes... ");
       futures = images.map((image) {
-        return CloudinaryFile.fromFutureByteData(image.asset!.getByteData(), identifier: image.asset!.identifier);
+        var idenifier = image.asset!.identifier;
+
+        return CloudinaryFile.fromFutureByteData(image.asset!.getByteData(), 
+          identifier:idenifier ?? "");
       }).toList();
     }
     return await _cloudinary.multiUpload(futures);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TabBugRepro extends StatelessWidget {
-  const TabBugRepro({Key? key}) : super(key: key);
+  const TabBugRepro({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TabBugRepro extends StatelessWidget {
 }
 
 class SomeView extends StatelessWidget {
-  const SomeView({Key? key}) : super(key: key);
+  const SomeView({super.key});
 
   @override
   Widget build(BuildContext context) {

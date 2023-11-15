@@ -4,7 +4,7 @@ import 'package:flutter_folio/_widgets/gradient_container.dart';
 import 'package:flutter_folio/core_packages.dart';
 
 class DeviceScreens extends StatelessWidget {
-  const DeviceScreens(this.portraitMode, {Key? key}) : super(key: key);
+  const DeviceScreens(this.portraitMode, {super.key});
   final bool portraitMode;
 
   @override
@@ -66,8 +66,7 @@ class DeviceScreens extends StatelessWidget {
 }
 
 class _LandingPageImage extends StatelessWidget {
-  _LandingPageImage(this.imagePath, this.offset, {Key? key, required this.height, this.scaleOnHover = true})
-      : super(key: key);
+  _LandingPageImage(this.imagePath, this.offset, {required this.height, this.scaleOnHover = true});
   final Offset offset;
   final String imagePath;
   final double height;

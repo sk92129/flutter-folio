@@ -15,7 +15,7 @@ List<BoxTransformData> _boxes = List.generate(
 
 // Create a Stack that will render each Box
 class OptimizedDragStack extends StatefulWidget {
-  const OptimizedDragStack({Key? key}) : super(key: key);
+  const OptimizedDragStack({super.key});
 
   @override
   _OptimizedDragStackState createState() => _OptimizedDragStackState();
@@ -70,7 +70,7 @@ class _OptimizedDragStackState extends State<OptimizedDragStack> {
 class _SquareImage extends StatelessWidget {
   final double scale;
 
-  const _SquareImage({Key? key, this.scale = 1}) : super(key: key);
+  const _SquareImage({this.scale = 1});
   @override
   Widget build(BuildContext context) {
     return SizedBox(

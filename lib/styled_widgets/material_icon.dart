@@ -6,7 +6,7 @@ class MaterialIcon extends StatelessWidget {
   final double size;
   final Color? color;
 
-  const MaterialIcon(this.icon, {Key? key, this.size = 20, this.color}) : super(key: key);
+  const MaterialIcon(this.icon, {super.key, this.size = 20, this.color});
   @override
   Widget build(BuildContext context) {
     AppTheme theme = context.watch();
